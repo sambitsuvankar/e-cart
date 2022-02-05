@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate, useParams, useLocation } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 
 const CollectionComponent = (props) => {
     const navigate = useNavigate()

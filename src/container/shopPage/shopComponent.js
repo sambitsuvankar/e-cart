@@ -1,11 +1,10 @@
 import React,{ useEffect } from 'react'
-import { useLocation, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { connect, useSelector } from 'react-redux'
 import CollectionComponent from '../collectionPage/collection.component'
 import { fetchCollectionsStart, sortAscending, sortDescending } from '../../redux/shop/shop.actions'
 import CollectionSkeleton from '../../component/skeleton/collection.skeleton'
 import {SortAscendingIcon, SortDescendingIcon} from '@heroicons/react/solid'
-import Tippy from '@tippy.js/react'
 import 'tippy.js/dist/tippy.css'
 
 const ShopComponent = ({fetchCollectionStart, sortAscending, sortDescending}) => {

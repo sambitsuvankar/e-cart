@@ -1,11 +1,9 @@
-import React, {useEffect} from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { SignInStart, signOutStart } from "../../redux/user/user.actions";
 
 const SignInCard = ({signInStart, signOutStart}) => {
-    // useEffect(()=>{
-    //     signOutStart()
-    // },[])
+    
     return(
         <div className="bg-white w-80 h-64 rounded-md">
             <p className="my-7 font-sans font-medium">Sign in through Google to Access the Cart!</p>

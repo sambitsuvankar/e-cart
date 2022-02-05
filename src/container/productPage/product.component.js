@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, connect } from "react-redux";
-import { useLocation, useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import CollectionSkeleton from "../../component/skeleton/collection.skeleton";
 import { addItem } from "../../redux/cart/cart.actions";
 

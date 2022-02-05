@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import  Logo from '../../assets/logo.png'
 import Tippy from '@tippy.js/react'
 import 'tippy.js/dist/tippy.css'
-import { UserCircleIcon, SearchIcon, LogoutIcon, ShoppingBagIcon, ShoppingCartIcon} from '@heroicons/react/solid'
+import { UserCircleIcon, LogoutIcon, ShoppingCartIcon} from '@heroicons/react/solid'
 import { signOutStart } from "../../redux/user/user.actions";
 import SearchComponent from "../searchComponent/search.component";
 
@@ -18,7 +18,7 @@ const Header = ({startLogOut}) => {
             <div className="w-screen h-16 sm:h-20 bg-blue-400 flex justify-between">
                 <div  className="h-full w-24 sm:w-32 cursor-pointer ml-3 sm:ml-4 bg-cover bg-center" style={{backgroundImage: 'url("../../assets/logo.png")', backgroundSize:'150%'}} >
                     <Link to="/">
-                        <img src={Logo} className="w-4/5 h-full p-3"></img>
+                        <img src={Logo} alt="Logo" className="w-4/5 h-full p-3"></img>
                     </Link>
                 </div>
 

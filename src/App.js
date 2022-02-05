@@ -16,7 +16,6 @@ const SearchResultComponent = lazy(() => import('./container/searchResultPage/se
 function App() {
 
   const currentUser = useSelector(state => state.user.currentUser)
-  const collection = useSelector(state => state.shop.collection)
 
   return (
     <div className="App">

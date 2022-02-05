@@ -13,7 +13,7 @@ const CheckoutPage = () => {
                 {
                     cartItems ? cartItems.map(({id, price, title, quantity, image, category, description}) => (
                         <CartItemComponent id={id} price={price} title={title} quantity={quantity} image={image} category={category} description={description}/>
-                    )) : (<img src={cart} className="w-auto h-4/6 p-3"></img>)
+                    )) : (<img src={cart} alt="No Items" className="w-auto h-4/6 p-3"></img>)
                 }
             </div>
             <div className="w-full h-14 bg-white rounded-lg m-1 flex shadow-2xl overflow-hidden sm:w-1/2 ">
