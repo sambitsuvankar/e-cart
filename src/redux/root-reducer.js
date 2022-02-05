@@ -11,7 +11,7 @@ import cartReducer from './cart/cart.reducers';
 const persistConfig = {
     key : 'root',
     storage,
-    whitelist : ['cart','user','shop']
+    whitelist : ['cart','user','shop','menu']
 }
 
 const rootReducer = combineReducers({

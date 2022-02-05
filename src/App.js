@@ -1,8 +1,8 @@
 import React, {lazy, Suspense} from 'react';
 
 import { Route, Routes, Navigate } from 'react-router-dom';
-import { connect } from 'react-redux';
 import { useSelector } from 'react-redux'
+import Spinner from './component/spinner/spinner.component';
 import './App.css';
 
 const SignInPage = lazy(() => import('./container/signInContainer/signInPage'))
@@ -19,13 +19,14 @@ function App() {
 
   return (
     <div className="App">
-    <Suspense fallback={<div>Loading.............</div>}>
+    <Suspense fallback={<Spinner/>}>
     <Header/>
       <Routes>
           <Route exact path='/' element={<HomePage/>} /> 
           <Route  path='/shop/:category' element={<ShopComponent/>} /> 
           <Route  path={`/shop/:param1/:id`} element={<ProductComponent/>} /> 
-          <Route exact  path={`/search`} element={<SearchResultComponent/>} /> 
+          <Route  path={`/search/:param1/:id`} element={<ProductComponent/>} /> 
+          <Route exact  path={`/search/category`} element={<SearchResultComponent/>} /> 
           <Route exact path='/signin' element={currentUser ? <Navigate  to="/"/> : <SignInPage/>}  /> 
           <Route exact path='/cart' element={currentUser ? <CheckoutPage/> : <Navigate  to="/signin"/> }  /> 
           </Routes>

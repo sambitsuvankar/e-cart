@@ -8,8 +8,8 @@ const ProductComponent = ({addItem})=> {
     const params = useParams()
     const navigate = useNavigate()
     const currentUser = useSelector(state => state.user.currentUser)
-    const productState = useSelector(state => state.shop)
-    const product = productState.collection?.filter((item) => item.id == params.id).pop()
+    const productState = useSelector(state => state.menu)
+    const product = productState.products?.filter((item) => item.id == params.id).pop()
     return(
         <div>
         {

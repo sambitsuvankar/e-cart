@@ -13,7 +13,7 @@ const SearchComponent = ({startSearch}) => {
 
     const navigateToSearch = (text) => {
         startSearch(text)
-        navigate('/search')
+        navigate('/search/category')
         setIsSearch(true)
     }
 

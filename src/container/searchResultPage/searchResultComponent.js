@@ -1,14 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router';
-import { RefreshIcon } from '@heroicons/react/solid';
 import CollectionComponent from '../collectionPage/collection.component';
 
 
 
-const SearchResultComponent =(props) => {
+const SearchResultComponent =() => {
  
-  const navigate = useNavigate()
   const searchResults = useSelector(state => state.menu.searchResults)
 
   return (
@@ -25,10 +22,7 @@ const SearchResultComponent =(props) => {
                 </div>//
         ) : (
           <div className='w-screen h-screen flex justify-center items-center bg-blue-100'>
-            <div className='w-3/12 h-3/12 bg-blue-100 flex justify-between items-center'>
               <div className='font-bold'>Results Not Found</div>
-              <RefreshIcon className='w-3/12 h-1/5 cursor-pointer' onClick={() => navigate('/')}/>
-            </div>
           </div>
         )
       }
