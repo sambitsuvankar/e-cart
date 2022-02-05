@@ -8,7 +8,7 @@ const CheckoutPage = () => {
     const totalPrice = cartItems.reduce(( accumulatedQuantity, cartItem ) => accumulatedQuantity + ( cartItem.price * cartItem.quantity ), 0).toFixed(2)
 
     return(
-        <div className="w-auto h-screen m-4 flex flex-col justify-between sm:justify-evenly items-center sm:m-10">
+        <div className="w-auto h-auto m-4 flex flex-col justify-between sm:justify-between items-center sm:m-10">
             <div className="w-full h-auto flex flex-col sm:w-1/2">
                 {
                     cartItems ? cartItems.map(({id, price, title, quantity, image, category, description}) => (

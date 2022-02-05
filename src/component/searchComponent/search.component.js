@@ -22,7 +22,7 @@ const SearchComponent = ({startSearch}) => {
         navigate('/')
     }
   return (
-    <div className="w-10/12 h-4/6 sm:h-3/6 flex bg-white rounded-md pl-4 shadow-lg items-center">
+    <div className="w-full h-4/6 sm:h-3/6 flex bg-white rounded-md pl-4 shadow-lg items-center">
         <input onChange={(e)=> setSearchTerm(e.target.value)} type="text" placeholder="Search Items here" className="w-full h-full rounded-sm focus:outline-none">
         </input>
         {

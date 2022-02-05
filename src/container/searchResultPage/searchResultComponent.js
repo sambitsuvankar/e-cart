@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { ExclamationCircleIcon } from '@heroicons/react/solid';
 import CollectionComponent from '../collectionPage/collection.component';
 
 
@@ -22,7 +23,8 @@ const SearchResultComponent =() => {
                 </div>//
         ) : (
           <div className='w-screen h-screen flex justify-center items-center bg-blue-100'>
-              <div className='font-bold'>Results Not Found</div>
+              <div className='font-bold mb-40 w-40 h-1/5 flex items-center'>Results Not Found</div>
+              <ExclamationCircleIcon className='w-10 h-1/5 mb-40'/>
           </div>
         )
       }

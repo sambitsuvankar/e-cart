@@ -18,10 +18,10 @@ const ShopComponent = ({fetchCollectionStart, sortAscending, sortDescending}) =>
     const CollectionItem = useSelector(state => state.shop)
     
     return(
-        <div className='w-full h-auto bg-white flex flex-col'>
-            <div className='h-10 w-full bg-white flex px-6 mt-4 sm:px-14'>
-                <SortAscendingIcon onClick={()=> sortAscending(CollectionItem.collection)} className='h-5/6 w-1/12 sm:w-12 text-slate-400 cursor-pointer'/>
-                <SortDescendingIcon onClick={()=> sortDescending(CollectionItem.collection)} className='h-5/6 w-1/12 sm:w-12 text-slate-400 cursor-pointer'/>
+        <div className='w-full h-auto bg-white flex flex-col mb-4'>
+            <div className='h-10 w-full bg-white flex px-4 mt-4 sm:px-14'>
+                <SortAscendingIcon onClick={()=> sortAscending(CollectionItem.collection)} className='h-5/6 w-2/12 pl-2 sm:w-12 text-slate-400 cursor-pointer'/>
+                <SortDescendingIcon onClick={()=> sortDescending(CollectionItem.collection)} className='h-5/6 w-2/12 pl-2 sm:w-12 text-slate-400 cursor-pointer'/>
             </div>
 
             {CollectionItem.isFetching ? (<CollectionSkeleton/>) : (

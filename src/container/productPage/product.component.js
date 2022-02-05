@@ -14,17 +14,17 @@ const ProductComponent = ({addItem})=> {
         <div>
         {
             productState.isFetching ? (<CollectionSkeleton/>) : (
-                <div className="w-auto h-auto bg-white flex flex-col p-6 sm:flex-row">
+                <div className="w-auto h-auto bg-white flex flex-col m-2 p-4 sm:p-24 sm:flex-row">
 
                     <div className="w-auto h-[38rem] bg-white flex flex-col sm:w-1/2 sm:h-[46rem] sm:justify-center">
-                        <div className="flex justify-items-end m-2 font-sans font-semibold text-xl sm:m-4">Product Name</div>
-                        <div className="flex justify-items-end m-2 font-sans font-normal text-sm sm:m-4">{product.title}</div>
-                        <div className="w-auto h-[30rem] sm:h-[26rem] sm:w-4/5 sm:m-4 mt-4 rounded-2xl bg-white shadow-2xl bg-center bg-cover bg-no-repeat" style={{backgroundImage : `url(${product.image})`, backgroundSize: "40%"}}/>
+                        <div className="flex justify-items-end m-2 font-sans font-semibold text-sm sm:m-4">Product Name</div>
+                        <div className="flex justify-items-end m-2 font-sans font-normal text-base sm:m-4">{product.title}</div>
+                        <div className="w-auto h-[30rem] sm:h-[28rem] sm:w-4/5 sm:m-4 mt-4 rounded-2xl bg-white shadow-2xl bg-center bg-cover bg-no-repeat" style={{backgroundImage : `url(${product.image})`, backgroundSize: "40%"}}/>
                       
                     </div>
 
 
-                    <div className="w-auto h-auto flex flex-col sm:w-1/2 sm:justify-center sm:h-[46rem]">
+                    <div className="w-auto h-auto flex flex-col sm:w-5/12 sm:justify-center sm:ml-20 rounded-xl overflow-hidden sm:h-[46rem]">
                         <div className="w-auto h-1/6 bg-white p-2 sm:p-4 flex items-center justify-around font-semibold font-sans text-xl">
                             <p>Price</p>
                             <p>{`$${product.price}`}</p>
