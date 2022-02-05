@@ -24,10 +24,13 @@ const ShopComponent = ({fetchCollectionStart, sortAscending, sortDescending}) =>
                     <SortAscendingIcon onClick={()=> sortAscending(CollectionItem.collection)} className='h-full w-3/12 pl-2 sm:w-12 text-slate-400 cursor-pointer'/>
                     <SortDescendingIcon onClick={()=> sortDescending(CollectionItem.collection)} className='h-full w-3/12 pl-2 sm:w-12 text-slate-400 cursor-pointer'/>
                 </div>
-                <div className=' h-full w-1/2 justify-end flex px-4 items-center'>
-                    <p className=' px0 font-semibold text-xl sm:text-2xl text-slate-800'>{CollectionItem.collection[0].category}</p>
-                    
-                </div>
+                {
+                    !CollectionItem.isFetching ? (
+                        <div className=' h-full w-1/2 justify-end flex px-4 items-center'>
+                            <p className=' px0 font-semibold text-xl sm:text-2xl text-slate-800'>{CollectionItem.collection[0].category}</p>
+                        </div>
+                    ) : null
+                }
             </div>
 
             {CollectionItem.isFetching ? (<CollectionSkeleton/>) : (
